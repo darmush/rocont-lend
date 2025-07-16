@@ -3,7 +3,7 @@
 This project was created as a test task.
 This is simple lending with a form and a slider that is adapted for desktop and mobile.
 
-[Open the site](https://darmush.github.io/rocont-color/)
+[Open the site](https://darmush.github.io/rocont-lend/)
 
 **Tech Stack:**
 
