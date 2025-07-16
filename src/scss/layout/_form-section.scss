@@ -1,0 +1,55 @@
+@use '/src/scss/tools/mixins' as *;
+@use '/src/scss/settings/colors' as *;
+@use '/src/scss/settings/spacing' as *;
+
+
+.form-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $accent;
+    color: $white;
+    @include border-radius($desktop-radius);
+    margin-top: 96px;
+
+    @include breakpoint(lg) {
+        margin-top: 64px;
+    }
+
+    .column:first-child {
+        width: 50%;
+        padding-right: 0;
+
+        @include breakpoint(md) {
+            width: 100%;
+        }
+    }
+
+    .column:last-child {
+        padding-right: 86px;
+    }
+
+    @include breakpoint(md) {
+        flex-direction: column;
+
+        .column:last-child {
+            padding-right: 24px;
+            padding-top: 0;
+        }
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .item {
+        position: relative;
+        padding-left: 32px;
+
+        &::before {
+            @include icon(left, 0, 24px, 24px, url(/src/assets/icons/circle-arrow.svg));
+        }
+    }
+}

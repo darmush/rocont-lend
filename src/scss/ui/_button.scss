@@ -1,0 +1,41 @@
+@use '/src/scss/tools/mixins' as *;
+@use '/src/scss/settings/typography' as *;
+@use '/src/scss/settings/colors' as *;
+@use '/src/scss/settings/spacing' as *;
+
+
+.button {
+    display: block;
+    @include font-set($font-secondary, 700, 18px, 1.1, 0);
+    background-color: $accent;
+    color: $white;
+    width: max-content;
+    padding: 16px 72px 16px 24px;
+    @include border-radius($button-radius);
+    position: relative;
+    cursor: pointer;
+    @include transition(background-color);
+    text-wrap: nowrap;
+
+    @include breakpoint(lg) {
+        font-size: 16px;
+    }
+
+    &:before {
+        @include icon(right, 16px, 48px, 20px, url(/src/assets/icons/long-arrow-white.svg));
+    }
+
+    &:hover {
+        background-color: $accent-hover;
+
+    }
+
+    &.-white {
+        background-color: $white;
+        color: $black;
+
+        &:before {
+        background-image: url(/src/assets/icons/long-arrow-green.svg);
+        }
+    }
+}

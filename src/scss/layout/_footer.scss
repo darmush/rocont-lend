@@ -1,0 +1,52 @@
+@use '/src/scss/tools/mixins' as *;
+@use '/src/scss/settings/colors' as *;
+
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    padding: 32px 0;
+
+    .navigation {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        margin-right: auto;
+        gap: 16px 32px;
+        margin-right: auto;
+
+        @include breakpoint(xs) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    hr {
+        display: none;
+    }
+
+    @include breakpoint(md) {
+        flex-direction: column;
+        gap: 32px;
+
+        hr {
+            display: block;
+            border-width: 1px;
+            border-style: solid;
+            background-color: $black;
+        }
+
+        .logo {
+            order: -1;
+        }
+    }
+
+
+}

@@ -1,0 +1,49 @@
+// generic
+@use 'generic/reset';
+
+// settings
+@use 'settings/colors';
+@use 'settings/typography';
+@use 'settings/spacing';
+
+// tools
+@use 'tools/mixins';
+
+// utilities
+@use 'utilities/helpers';
+
+// layout
+@use 'layout/contact-section';
+@use 'layout/footer';
+@use 'layout/form-section';
+@use 'layout/header';
+@use 'layout/main-section';
+@use 'layout/slider-section';
+
+// ui
+@use 'ui/button';
+@use 'ui/card';
+@use 'ui/column';
+@use 'ui/container';
+@use 'ui/input';
+@use 'ui/title';
+
+
+// components
+@use 'components/contact-form';
+@use 'components/card-slider';
+@use 'components/navbar';
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: colors.$bg;
+    @include mixins.font-set(typography.$font-primary,400,16px,1.5,-0.3px);
+    color: colors.$black;
+    overflow-x: hidden;
+}
+
+
+

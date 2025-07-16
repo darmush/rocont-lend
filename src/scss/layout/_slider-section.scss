@@ -1,0 +1,71 @@
+@use '/src/scss/tools/mixins' as *;
+
+.slider-section {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 96px;
+
+    @include breakpoint(lg) {
+        margin-top: 64px;
+    }
+
+    @include breakpoint(md) {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .column:first-child {
+        max-width: 236px;
+        padding: 0;
+        justify-content: space-between;
+        @include breakpoint(md) {
+            max-width: 100%;
+        }
+    }
+
+    .column:last-child {
+        width: 100%;
+        padding: 0;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        @include breakpoint(md) {
+            display: none;
+        }
+    }
+
+    .prev {
+        position: relative;
+        cursor: pointer;
+        width: 48px;
+        height: 20px;
+        &:disabled {
+            &:before {
+                @include icon(left, 0, 48px, 20px, url(/src/assets/icons/long-arrow-black-prev.svg));
+            }
+        }
+
+        &:before {
+            @include icon(left,0,48px,20px,url(/src/assets/icons/long-arrow-green-prev.svg));
+        }
+    }
+
+    .next {
+        position: relative;
+        cursor: pointer;
+        width: 48px;
+        height: 20px;
+        &:disabled {
+            &:before {
+                @include icon(left, 0, 48px, 20px, url(/src/assets/icons/long-arrow-black.svg));
+            }
+        }
+        &:before {
+            @include icon(left, 0, 48px, 20px, url(/src/assets/icons/long-arrow-green.svg));
+        }
+    }
+}

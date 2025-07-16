@@ -1,0 +1,17 @@
+@use '/src/scss/tools/mixins' as *;
+
+.column {
+    display: flex;
+    flex-direction: column;
+    padding: 64px;
+    gap: 24px;
+
+    @include breakpoint(lg) {
+        padding: 48px;
+    }
+
+    @include breakpoint(md) {
+        padding: 24px;
+        gap: 24px;
+    }
+}

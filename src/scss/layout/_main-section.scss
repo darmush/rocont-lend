@@ -1,0 +1,107 @@
+@use '/src/scss/tools/mixins' as *;
+@use '/src/scss/settings/spacing' as *;
+@use '/src/scss/settings/colors' as *;
+@use '/src/scss/settings/typography' as *;
+
+
+.main-section {
+    @include border-radius($desktop-radius);
+    @include bg-image(100%, 100%, url(/src/assets/images/main.png));
+    color: $white;
+
+
+    @include breakpoint(md) {
+        background-position: right;
+    }
+
+    @include breakpoint(sm) {
+        background-image: none;
+    }
+
+
+
+    .title {
+        @include breakpoint(sm) {
+            @include bg-image(100%, 200px, url(/src/assets/images/main.png));
+            background-position: right;
+            padding: 32px 32px 80px 32px;
+            @include border-radius($desktop-radius);
+        }
+    }
+
+    .column {
+        gap: 32px;
+        @include breakpoint(sm) {
+            padding: 0;
+        }
+    }
+
+
+    .panel {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+
+        @include breakpoint(sm) {
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            text-align: end;
+            margin-left: auto;
+            @include font-set($font-primary, 400, 16px, 1.5, -0.3px);
+            gap: 4px;
+            overflow-wrap: break-word;
+
+            br {
+                display: none;
+            }
+
+            @include breakpoint(md) {
+                @include font-set($font-primary, 400, 12px, 1, -0.3px);
+
+                br {
+                    display: block;
+                }
+            }
+
+            @include breakpoint(sm) {
+                flex-direction: row;
+                text-align: start;
+                color: $black;
+                opacity: 0.5;
+                margin-left: 0;
+
+                br {
+                    display: none;
+                }
+            }
+
+            @include breakpoint(sm) {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    }
+
+    .text {
+        max-width: 425px;
+        @include font-set($font-primary, 500, 21px, 1.4, -0.6px);
+
+        @include breakpoint(lg) {
+            @include font-set($font-primary, 500, 18px, 1.2, -0.5px);
+        }
+
+        @include breakpoint(sm) {
+            color: $black;
+        }
+    }
+
+    .button {
+        padding-right: 80px;
+    }
+}

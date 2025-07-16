@@ -1,0 +1,68 @@
+@use '/src/scss/tools/mixins' as *;
+@use '/src/scss/settings/typography' as *;
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include breakpoint(md) {
+        gap: 24px;
+    }
+
+    .inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 8px;
+
+        @include breakpoint(md) {
+            flex-direction: row;
+        }
+
+        @include breakpoint(sm) {
+            flex-direction: column;
+        }
+    }
+
+    .input {
+        @include breakpoint(md) {
+            width: 100%;
+        }
+
+    }
+
+    .label {
+        position: absolute;
+        overflow: hidden;
+        width: 0;
+        height: 0;
+    }
+
+    .consent label{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+        @include font-set($font-primary, 400, 12px, 1, -0.2px)
+    }
+
+    .checkbox {
+        appearance: none;
+        position: relative;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+
+        &:after {
+            @include icon(left, 0, 24px, 24px, url(/src/assets/icons/unchecked.svg));
+        }
+
+        &:checked::after {
+            @include icon(left, 0, 24px, 24px, url(/src/assets/icons/checked.svg));
+        }
+
+    }
+
+}
