@@ -2,6 +2,8 @@
 
 .logo {
     display: block;
+    width: 130px;
+    height: 36px;
     cursor: pointer;
     @include bg-image(130px, 36px, url(/src/assets/images/logo.svg))
 }
