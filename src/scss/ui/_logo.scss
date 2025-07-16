@@ -1,0 +1,7 @@
+@use '/src/scss/tools/mixins' as *;
+
+.logo {
+    display: block;
+    cursor: pointer;
+    @include bg-image(130px, 36px, url(/src/assets/images/logo.svg))
+}
