@@ -1,0 +1,94 @@
+
+
+@mixin font-set(
+  $family,
+  $weight: 400,
+  $size: 16px,
+  $line: 1.5,
+  $letter: -0.3px,
+  $transform: none
+) {
+  font-family: $family;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line;
+  letter-spacing: $letter;
+  text-transform: $transform;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin icon($side, $spacing, $width, $height, $url){
+    position: absolute;
+    content: '';
+    top: 50%;
+    width: $width;
+    height: $height;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: $url;
+
+    -webkit-transform: translateX(0%) translateY(-50%);
+    -moz-transform: translateX(0%) translateY(-50%);
+    -ms-transform: translateX(0%) translateY(-50%);
+    -o-transform: translateX(0%) translateY(-50%);
+    transform: translateX(0%) translateY(-50%);
+
+    @if $side == left {
+         left: $spacing;
+    }
+    @else if $side == right {
+        right: $spacing;
+    }
+}
+
+@mixin bg-gradient() {
+    position: absolute;
+    content: '';
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: $primary-gradient;
+}
+
+@mixin bg-image($width, $height, $url) {
+    width: $width;
+    height: $height;
+    background-image: $url;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+@mixin transition($property, $time: 0.3s) {
+    transition: $property ease-in-out $time;
+    -webkit-transition: $property ease-in-out $time;
+    -moz-transition: $property ease-in-out $time;
+    -ms-transition: $property ease-in-out $time;
+    -o-transition: $property ease-in-out $time;
+}
+
+@mixin breakpoint($point) {
+    @if $point == xl {
+        @media (max-width: 1200px) {@content;}
+    }
+    @else if $point == lg {
+        @media (max-width: 960px) {@content;}
+    }
+    @else if $point == md {
+        @media (max-width: 720px) {@content;}
+    }
+    @else if $point == sm {
+        @media (max-width: 480px) {@content;}
+    }
+    @else if $point == xs {
+        @media (max-width: 320px) {@content;}
+    }
+}

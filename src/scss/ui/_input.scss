@@ -1,0 +1,16 @@
+@use '/src/scss/tools/mixins' as *;
+@use '/src/scss/settings/colors' as *;
+@use '/src/scss/settings/spacing' as *;
+
+.input {
+    width: 100%;
+    background-color: $white;
+    @include border-radius($button-radius);
+    padding: 8px 16px 8px 24px;
+    color: $black;
+
+    &:focus {
+        outline-color: $accent-hover;
+        outline-width: 2px;
+    }
+}

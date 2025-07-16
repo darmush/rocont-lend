@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Rocont</title>
+</head>
+<body>
+    <div class="container" id="app">
+        <header class="header">
+            <div class="container">
+                <a class="logo" href=""></a>
+                <div class="burger" id="burger"></div>
+                <ul class="navbar">
+                    <li class="navitem"><a href="" class="link">О системе</a></li>
+                    <li class="navitem"><a href="" class="link">Архитектура</a></li>
+                    <li class="navitem"><a href="" class="link">Мнения</a></li>
+                    <li class="navitem -active"><a href="" class="link">Попробовать</a></li>
+                    <li class="navitem"><a href="" class="link">Для своих</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <main class="main-section">
+            <div class="column">
+                <h1 class="title -white -xl">Просто потому<br>что можем</h1>
+                <p class="text">Мы запустили основной цикл в 06:42.<br>Результаты наблюдаются, но не зафиксированы.<br>Рекомендуем сохранять спокойствие до следующего сигнала.</p>
+                <div class="panel">
+                    <a href="#form-section" class="button">Попробовать просто так</a>
+                    <div class="info">
+                        <span>Сертификат есть. Но это не точно.</span>
+                        <span>СГР №AM.01.01<br> .01.003.R.00 o47 4.06.24</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </main>
+
+        <section class="slider-section">
+            <div class="column">
+                <h2 class="title">Это — не совсем то, что вы думаете</h2>
+                <div class="buttons">
+                    <button class="prev" disabled></button>
+                    <button class="next"></button>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card-slider">
+                    <div class="track">
+                        <div class="card -active">
+                            <h4 class="title -sm">Немного упругости</h4>
+                            <p class="subtitle">Чуть-чуть сияния,<br>и ощущение, что вы о себе позаботились</p>
+                        </div>
+                        <div class="card">
+                            <h4 class="title -sm">Немного упругости</h4>
+                            <p class="subtitle">Чуть-чуть сияния,<br>и ощущение, что вы о себе позаботились</p>
+                        </div>
+                        <div class="card">
+                            <h4 class="title -sm">Немного упругости</h4>
+                            <p class="subtitle">Чуть-чуть сияния,<br>и ощущение, что вы о себе позаботились</p>
+                        </div>
+                        <div class="card">
+                            <h4 class="title -sm">Немного упругости</h4>
+                            <p class="subtitle">Чуть-чуть сияния,<br>и ощущение, что вы о себе позаботились</p>
+                        </div>
+                        <div class="card">
+                            <h4 class="title -sm">Немного упругости</h4>
+                            <p class="subtitle">Чуть-чуть сияния,<br>и ощущение, что вы о себе позаботились</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="form-section" id="form-section">
+            <div class="column">
+                <h2 class="title -white">Если вы тоже решили<br>«а почему бы и нет»</h2>
+                <ul class="list">
+                    <li class="item">Можно заказать много</li>
+                    <li class="item">Доступ возможен через северный интерфейс</li>
+                    <li class="item">Можно просто поболтать</li>
+                </ul>
+            </div>
+            <div class="column">
+                <form class="contact-form" id="contact-form" action="/apply/" method="post">
+                    <div>
+                        <div class="inputs">
+                            <label for="name" class="label">Имя</label>
+                            <input class="input" type="text" name="name" id="name" placeholder="Имя" required>
+                            <label for="tel" class="label">Телефон</label>
+                            <input class="input" type="tel" name="tel" id="tel" placeholder="Телефон" required>
+                        </div>
+                        <div class="consent">
+                            <label for="consent" class=""><input class="checkbox" type="checkbox"  name="consent" id="checkbox" value="1" unchecked required>Согласен(-на) на обработку чего угодно — лишь бы форма работала</label>
+
+                        </div>
+                    </div>
+                    <button class="button -white" type="submit" disabled>Отправить</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="column">
+                <h2 class="title">Контакты</h2>
+                <div class="list">
+                    <address class="office">
+                        Офис, где делают странные, но симпатичные вещи
+                    </address>
+                    <p class="hours">Пн-Пт с 10:00 до 20:00</p>
+                    <address class="phones">
+                        <a class="phone" href="tel:+78004444444">8 (800) 444 44 44</a>
+                        <a class="phone" href="tel:+78008888888">8 (800) 888 88 88</a>
+                    </address>
+                    <address>
+                        <a class="mail" href="mailto:example@mail.ru">example@mail.ru</a>
+                    </address>
+                </div>
+                <a href="#form-section" class="button">Связаться</a>
+            </div>
+            <div class="map"></div>
+        </section>
+
+        <footer class="footer">
+            <ul class="navigation">
+                <li class=""><a href="">О системе</a></li>
+                <li class=""><a href="">Архитектура</a></li>
+                <li class=""><a href="">Для своих</a></li>
+                <li class=""><a href="">Состав</a></li>
+                <li class=""><a href="">Отзывы</a></li>
+            </ul>
+            <hr>
+            <div class="links">
+                <div class="">Коллаген © 2025</div>
+                <a class="" href="" target="_blank" rel="noopener noreferrer">Политика обработки чего-то личного</a>
+            </div>
+            <a href="" class="logo"></a>
+        </footer>
+    </div>
+</body>
+</html>
